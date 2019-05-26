@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DataAccessLibrary;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,7 +26,6 @@ namespace App1
         public MainPage()
         {
             this.InitializeComponent();
-  
         }
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
@@ -95,7 +95,7 @@ namespace App1
                         break;
 
                     case "DL":
-                        ContentFrame.Navigate(typeof(NewDL));
+                        ContentFrame.Navigate(typeof(NewDL1));
                         break;
 
                     case "FV":
