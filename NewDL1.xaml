@@ -16,12 +16,8 @@
                TextWrapping="Wrap" Width="300"
                TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
             <TextBox x:Name="LLTextBox" Margin="4,-5,4,4" Width="250"/>
-            <TextBlock Text="Enter DOB" Margin="0,20,0,20"
-               TextWrapping="Wrap" Width="300"
-               TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
-            <TextBox x:Name="DOBTextBox" Margin="4,-0.6,4,4" Width="250"/>
             <Button x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
-         Width="80" HorizontalAlignment="Center" Margin="0,20"/>
+         Width="80" HorizontalAlignment="Center" Margin="0,20" Click="PassportSignInButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using DataAccessLibrary;
+using System.Data.SqlClient;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -21,8 +22,11 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    
+        
     public sealed partial class MainPage : Page
     {
+        const string connstring = "Data Source=DESKTOP-NBNJR96;Initial Catalog=RTO;Integrated Security=True";
         public MainPage()
         {
             this.InitializeComponent();
@@ -73,6 +77,14 @@ namespace App1
                     case "LL":
                         ContentFrame.Navigate(typeof(NewLL));
                         break;
+
+                    case "Database":
+                        ContentFrame.Navigate(typeof(ShowDatabase));
+                        break;
+
+                    case "GD":
+                        ContentFrame.Navigate(typeof(GetDocuments));
+                        break;
                 }
             }
         }
@@ -109,6 +121,15 @@ namespace App1
                     case "LL":
                         ContentFrame.Navigate(typeof(NewLL));
                         break;
+
+                    case "Database":
+                        ContentFrame.Navigate(typeof(ShowDatabase));
+                        break;
+
+                    case "GD":
+                        ContentFrame.Navigate(typeof(GetDocuments));
+                        break;
+
                 }
             }
         }

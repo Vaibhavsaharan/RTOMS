@@ -1,0 +1,28 @@
+﻿<Page xmlns:my="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    x:Class="App1.ShowDatabase"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <Button  x:Name="AddData" Content="Add Data" Background="DodgerBlue" Foreground="White"
+                     Width="189"  Margin="10" Click="ADDData_Click" />
+            <!--<TextBlock Text="Test VARCHAR name"></TextBlock>
+            <TextBox x:Name="TestText" ></TextBox>
+            <TextBlock Text="Test VARCHAR name1"></TextBlock>
+            <TextBox x:Name="TestText1" ></TextBox>
+            <TextBlock Text="Test INT name2"></TextBlock>
+            <TextBox x:Name="TestText2" ></TextBox>
+            <DatePicker Header="DATE CHECK" x:Name="datetest" ></DatePicker>-->
+            <TextBlock Text="Test BIG INT name3"></TextBlock>
+            <TextBox x:Name="TestText3" ></TextBox>
+            <TextBlock Text="Test var char max name4"></TextBlock>
+            <TextBox x:Name="TestText4" ></TextBox>
+        </StackPanel>
+    </Grid>
+</Page>

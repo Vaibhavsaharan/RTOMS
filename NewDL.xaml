@@ -103,5 +103,7 @@
             <x:String>TOWTRK</x:String>
             <x:String>BRKREC</x:String>
         </ComboBox>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="DLButton" Content="Submit" Background="DodgerBlue" Foreground="White"
+         Width="189" HorizontalAlignment="Left" Margin="10,29.4,0,0" VerticalAlignment="Top" Click="DLButton_Click" />
     </Grid>
 </Page>

@@ -9,6 +9,15 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock Text="COMING SOON"></TextBlock>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="FIND VEHICLE DETAILS USING RC NUMBER" FontSize="48" Margin="4" TextAlignment="Center" Width="700"/>
+            <TextBlock x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center"/>
+            <TextBlock Text="Enter RC NO" Margin="0,50,0,20"
+               TextWrapping="Wrap" Width="300"
+               TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+            <TextBox x:Name="LLTextBox" Margin="4,-5,4,4" Width="250" PlaceholderText="FOR EX- RJ01PA5366" />
+            <Button x:Name="PassportSignInButton" Content="SEARCH" Background="DodgerBlue" Foreground="White"
+         Width="80" HorizontalAlignment="Center" Margin="0,20"/>
+        </StackPanel>
     </Grid>
 </Page>

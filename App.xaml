@@ -4,4 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:App1">
 
+    <Application.Resources>
+        <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+              BackgroundSource="Backdrop" TintColor="Blue" TintOpacity=".6"/>
+    </Application.Resources>
+
 </Application>

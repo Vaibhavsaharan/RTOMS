@@ -20,17 +20,21 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewDL1 : Page
+    public sealed partial class FinalLL : Page
     {
-        public NewDL1()
+        public FinalLL()
         {
             this.InitializeComponent();
         }
 
-        private void PassportSignInButton_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.Frame.Navigate(typeof(NewDL));
+            LLNO.Text = "Your Learner Licence NO is :  " + e.Parameter.ToString() + "   Please save this for future refrence";
+        }
 
+        private void LLButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Home));
         }
     }
 }

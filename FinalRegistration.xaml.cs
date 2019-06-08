@@ -20,17 +20,16 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class NewDL1 : Page
+    public sealed partial class FinalRegistration : Page
     {
-        public NewDL1()
+        public FinalRegistration()
         {
             this.InitializeComponent();
         }
 
-        private void PassportSignInButton_Click(object sender, RoutedEventArgs e)
+        private void FinalRCButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(NewDL));
-
+            this.Frame.Navigate(typeof(Home));
         }
     }
 }
