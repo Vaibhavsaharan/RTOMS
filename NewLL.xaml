@@ -21,7 +21,7 @@
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Orientation="Vertical" >
-            <TextBlock Text="Add New Learner's Licence (LL)" FontSize="24"></TextBlock>
+            <TextBlock Text="Add New Learner's Licence (LL)" FontSize="24" FontWeight="Bold"></TextBlock>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Select State and RTO Office from where LL is being applied:-" Width="405" Height="20" ></TextBlock>
                 <TextBlock Margin="10,6,10,0" Text="State"></TextBlock>
@@ -51,7 +51,7 @@
                     </ComboBox>
 
                     <TextBlock Text="Date of Birth" Margin="105,0,0,0"></TextBlock>
-                    <DatePicker x:Name="DateOfbirth" Margin="117,0,0,0"></DatePicker>
+                    <TextBox x:Name="DOBTextBox" Margin="117,0,0,0" PlaceholderText="DD-MM-YYYY"></TextBox>
                     
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5">
@@ -97,18 +97,14 @@
             <x:String>MCWOG</x:String>
             <x:String>MCWG</x:String>
             <x:String>LMV</x:String>
-            <x:String>3W-NT</x:String>
+            <x:String>LMV-NT</x:String>
             <x:String>TRCTOR</x:String>
-            <x:String>INVCRG</x:String>
             <x:String>RDRLR</x:String>
-            <x:String>OTHER</x:String>
             <x:String>LDRXCV</x:String>
             <x:String>CRANE</x:String>
             <x:String>FLIFT</x:String>
             <x:String>BRIGS</x:String>
             <x:String>CNEQP</x:String>
-            <x:String>INVCG2</x:String>
-            <x:String>INVCG3</x:String>
             <x:String>eCART</x:String>
             <x:String>eRIKSH</x:String>
             <x:String>AGRTLR</x:String>
@@ -117,18 +113,6 @@
         </ComboBox>
         <Button Grid.Row="3" Grid.Column="0" x:Name="LLButton" Content="Submit" Background="DodgerBlue" Foreground="White"
          Width="189" HorizontalAlignment="Left" Margin="10,29.4,0,0" VerticalAlignment="Top" Click="LLButton_Click" />
-        <!-- <StackPanel>
-            <TextBlock x:Name="data1"></TextBlock>
-            <TextBlock x:Name="data2"></TextBlock>
-            <TextBlock x:Name="data3"></TextBlock>
-            <TextBlock x:Name="data4"></TextBlock>
-            <TextBlock x:Name="data5"></TextBlock>
-            <TextBlock x:Name="data6"></TextBlock>
-            <TextBlock x:Name="data7"></TextBlock>
-            <TextBlock x:Name="data8"></TextBlock>
-            <TextBlock x:Name="data9"></TextBlock>
-            <TextBlock x:Name="data10"></TextBlock>
-        </StackPanel>-->
     </Grid>
     
 </Page>

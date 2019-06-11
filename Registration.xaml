@@ -10,134 +10,151 @@
     <ScrollViewer>
         <Grid>
             <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Vertical" >
-                <TextBlock Text="Add New Vehicle Registration" TextAlignment="Left" FontSize="24"></TextBlock>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Vertical" Margin="8,0,0,0" >
+                <TextBlock Text="Add New Vehicle Registration" TextAlignment="Left" FontSize="24" FontWeight="Bold"></TextBlock>
 
-
+                <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                    <TextBlock Text="State"></TextBlock>
+                    <TextBox x:Name="StateTextBox" Margin="66,0,0,0" Width="139"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Rto Office"></TextBlock>
+                    <TextBox x:Name="RtoTextBox" Margin="33,0,0,0" Width="139"></TextBox>
+                </StackPanel>
                 <StackPanel Margin="0,10,0,0">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Aadhar Number" ></TextBlock>
-                        <TextBox Name="AadharTextBox"  Margin="200,0,0,0" Width="201" PlaceholderText="XXXX-XXXX-XXXX-XXXX" ></TextBox>
+                        <TextBox Name="AadharTextBox"  Margin="200,0,0,0" Width="201" PlaceholderText="XXXX-XXXX-XXXX" ></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Name of the Applicant" ></TextBlock>
-                        <TextBox Margin="159,0,0,0" Width="201" ></TextBox>
+                        <TextBox x:Name="UsernameTextBox" Margin="157,0,0,0" Width="201" ></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Father's Name of the Applicant" ></TextBlock>
-                        <TextBox Margin="108,0,0,0" Width="201"></TextBox>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="0,5,40,0" Text="Gender"></TextBlock>
-                        <RadioButton x:Name="Option1RadioButton" Content="Male" />
-                        <RadioButton x:Name="Option2RadioButton" Content="Female" />
-                        <RadioButton x:Name="Option3RadioButton" Content="Transgender" />
+                        <TextBox x:Name="FatherNameTextBox" Margin="102,0,0,0" Width="201"></TextBox>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
                         <TextBlock Text="Phone Number"></TextBlock>
-                        <TextBox Margin="10,0,40,0" PlaceholderText="EX: 2459814143"></TextBox>
+                        <TextBox x:Name="MobileTextBox" Margin="10,0,40,0" PlaceholderText="EX: 9459814143"></TextBox>
                         <TextBlock Margin="100,0,0,0" Text="Email"></TextBlock>
-                        <TextBox Margin="10,0,40,0" PlaceholderText="EX: abc@xyz.com"></TextBox>
+                        <TextBox x:Name="EmailTextBox" Margin="10,0,40,0" PlaceholderText="EX: abc@xyz.com"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <TextBlock Margin="0,0,0,0" Text="Identification Mark"></TextBlock>
+                        <TextBox x:Name="IdentificationTextbox" Margin="10,0,40,0" PlaceholderText="SCAR ON HEAD, MOLE ON RIGHT HAND ETC"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0,0,0,0" Text="Date of Birth"></TextBlock>
+                        <TextBox x:Name="DOBTextbox" Margin="10,0,40,0" PlaceholderText="DD-MM-YYYY"></TextBox>
                     </StackPanel>
 
                 </StackPanel>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,30,0,0">
-                <TextBlock Margin="0,0,0,20" Text="Address of applier"></TextBlock>
+                <TextBlock  Margin="0,0,39,20" Text="Address of applier"></TextBlock>
             </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,30,0,0">
-                <TextBox x:Name="ApplierAddress" Margin="0,0,0,1" ></TextBox>
+            <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,30,0,0">
+                <TextBox x:Name="ApplierAddress" Margin="-105,0,0,1" Width="360" ></TextBox>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="3" Margin="10,30,0,0">
                 <TextBlock Margin="0,0,0,20" Text="Address of Dealer"></TextBlock>
             </StackPanel>
-            <StackPanel Grid.Row="1" Grid.Column="4" Margin="0,30,0,0">
-                <TextBox x:Name="DealerAddress" Margin="0,0,0,1" ></TextBox>
+            <StackPanel Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="205,30.6,26,455" Grid.RowSpan="2">
+                <TextBox x:Name="DealerAddress" Margin="0,0,0,1" Width="300" ></TextBox>
             </StackPanel>
             <StackPanel Grid.ColumnSpan="4" Grid.Row="2" >
-            <ComboBox  Margin="10,20,0,20" PlaceholderText="Select Multiple class of vehicle" Width="200">
-                <x:String>MC50CC</x:String>
-                <x:String>MCWOG</x:String>
-                <x:String>MCWG</x:String>
-                <x:String>LMV</x:String>
-                <x:String>3W-NT</x:String>
-                <x:String>TRCTOR</x:String>
-                <x:String>INVCRG</x:String>
-                <x:String>RDRLR</x:String>
-                <x:String>OTHER</x:String>
-                <x:String>LDRXCV</x:String>
-                <x:String>CRANE</x:String>
-                <x:String>FLIFT</x:String>
-                <x:String>BRIGS</x:String>
-                <x:String>CNEQP</x:String>
-                <x:String>INVCG2</x:String>
-                <x:String>INVCG3</x:String>
-                <x:String>eCART</x:String>
-                <x:String>eRIKSH</x:String>
-                <x:String>AGRTLR</x:String>
-                <x:String>TOWTRK</x:String>
-                <x:String>BRKREC</x:String>
-            </ComboBox>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Type of Body" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Width="205" Margin="263,0,0,0"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Type of Vehicle" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="250,0,0,0" Width="205"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Maker's Name" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="255,0,0,0" Width="205"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Month and year of manufacture" Margin="10,0,0,0" ></TextBlock>
-                <DatePicker Margin="139,0,0,0" ></DatePicker>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="No of Cyclinders" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="241,0,0,0" Width="205"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="HorsePower" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="270,0,0,0" Width="205"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Cubic capacity" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="255,0,0,0" Width="205"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Chasis Number" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="250,0,0,0" Width="205"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Engine Number or Motor Number in case
+                <ComboBox x:Name="VehicleCombobox" Margin="10,20,0,20" PlaceholderText="Select Multiple class of vehicle" Width="200">
+                    <x:String>MC50CC</x:String>
+                    <x:String>MCWOG</x:String>
+                    <x:String>MCWG</x:String>
+                    <x:String>LMV</x:String>
+                    <x:String>LMV-NT</x:String>
+                    <x:String>TRCTOR</x:String>
+                    <x:String>RDRLR</x:String>
+                    <x:String>LDRXCV</x:String>
+                    <x:String>CRANE</x:String>
+                    <x:String>FLIFT</x:String>
+                    <x:String>BRIGS</x:String>
+                    <x:String>CNEQP</x:String>
+                    <x:String>eCART</x:String>
+                    <x:String>eRIKSH</x:String>
+                    <x:String>AGRTLR</x:String>
+                    <x:String>TOWTRK</x:String>
+                    <x:String>BRKREC</x:String>
+                </ComboBox>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Type of Body" Margin="10,0,0,0" ></TextBlock>
+                    <TextBox x:Name="TypeBodyTextBox" Width="296" Margin="263,0,0,0" PlaceholderText="EX: Sedan"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                    <TextBlock Text="Maker's Name" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="MakerTextBox" Margin="255,0,0,0" Width="296" PlaceholderText="EX: Nissan"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                    <TextBlock Text="Month and year of manufacture" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="MfdTextBox" Margin="140,0,0,0" Width="296" PlaceholderText="MM-YYYY"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                    <TextBlock Text="No of Cyclinders" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="CyclinderTextBox" Margin="241,0,0,0" Width="296"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                    <TextBlock Text="HorsePower" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="HpTextBox" Margin="269.6,0,0,0" Width="296"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                    <TextBlock Text="Cubic capacity" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="CCTextBox" Margin="255,0,0,0" Width="296"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                    <TextBlock Text="Chasis Number" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="ChasisTextBox" Margin="249,0,0,0" Width="296"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Engine Number or Motor Number in case
 of Battery Operated Vehicles" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Margin="108,0,0,0" Width="200"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Particulars of previous registration and
+                    <TextBox Margin="108,0,0,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Particulars of previous registration and
 registered number (if any)
 " Margin="12,0,0,0"></TextBlock>
-                <TextBox Margin="146,0,0,0" Width="200"></TextBox>
-            </StackPanel>
-            <Button Grid.Row="3" Grid.Column="0" x:Name="RCButton" Content="Submit" Background="DodgerBlue" Foreground="White"
+                    <TextBox Margin="142,0,0,0" Width="200"></TextBox>
+                </StackPanel>
+
+                <TextBlock Text="Fill Up Insurance Details" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,19" Height="27.8"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Insurance Date" Margin="10,2,0,0"></TextBlock>
+                    <TextBox x:Name="InsDateTextBox" Margin="75,0,0,0" Width="152" PlaceholderText="DD-MM-YYYY"></TextBox>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Insurance Premium" Margin="10,2,0,0"></TextBlock>
+                    <TextBox x:Name="InsPremiumTextBox" Margin="47,0,0,0" Width="152"></TextBox>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Insurance Amount" Margin="10,2,0,0"></TextBlock>
+                    <TextBox x:Name="InsAmountTextBox" Margin="52,0,0,0" Width="152"></TextBox>
+                </StackPanel>
+                <Button Grid.Row="3" Grid.Column="0" x:Name="RCButton" Content="Submit" Background="DodgerBlue" Foreground="White"
              Width="189" HorizontalAlignment="Left" Margin="10,29.4,0,0" VerticalAlignment="Top" Click="RCButton_Click" />
-        </StackPanel>
-       
-         </Grid>
+            </StackPanel>
+
+        </Grid>
     </ScrollViewer>
 </Page>

@@ -27,6 +27,23 @@ namespace App1
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+
+        {
+
+            Customers s = (Customers)e.Parameter;
+
+            namebox.Text = s.Name;
+            fathername.Text = s.FName;
+            emailbox.Text = s.Email;
+            addressbox.Text = s.Address;
+            aadharbox.Text = s.aadhar;
+            mobilebox.Text = s.Mobile;
+            identificationbox.Text = s.Identity;
+            vehiclebox.Text = s.vehicletype;
+            dobbox.Text = s.DOB;
+        }
+
         private void DLButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(FinalDL));

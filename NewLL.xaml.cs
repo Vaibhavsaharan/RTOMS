@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using DataAccessLibrary;
 using System.Data.SqlClient;
 using System.Data;
 using Windows.UI.Popups;
@@ -35,7 +34,7 @@ namespace App1
 
         private void LLButton_Click(object sender, RoutedEventArgs e)
         {
-            string datestring=DateOfbirth.ToString();
+            
             string Currentdate = DateTime.Now.ToString();
             try
             {
@@ -48,7 +47,7 @@ namespace App1
                         command.Parameters.Add("@Email", SqlDbType.VarChar).Value = EmailTextbox.Text;
                         command.Parameters.Add("@Identity", SqlDbType.VarChar).Value = IdentificationTextbox.Text;
                         command.Parameters.Add("@address", SqlDbType.VarChar).Value = addressTextbox.Text;
-                        command.Parameters.Add("@DOB", SqlDbType.VarChar).Value = datestring;
+                        command.Parameters.Add("@DOB", SqlDbType.VarChar).Value = DOBTextBox.Text;
                         command.Parameters.Add("@Mobile", SqlDbType.VarChar).Value = PhoneTextbox.Text;
                         command.Parameters.Add("@State", SqlDbType.VarChar).Value = StateTextbox.Text;
                         command.Parameters.Add("@rto", SqlDbType.VarChar).Value = RtoTextbox.Text;

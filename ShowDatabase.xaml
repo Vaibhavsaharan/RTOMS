@@ -16,13 +16,13 @@
             <TextBox x:Name="TestText" ></TextBox>
             <TextBlock Text="Test VARCHAR name1"></TextBlock>
             <TextBox x:Name="TestText1" ></TextBox>
-            <TextBlock Text="Test INT name2"></TextBlock>
+            
             <TextBox x:Name="TestText2" ></TextBox>
             <DatePicker Header="DATE CHECK" x:Name="datetest" ></DatePicker>-->
-            <TextBlock Text="Test BIG INT name3"></TextBlock>
-            <TextBox x:Name="TestText3" ></TextBox>
-            <TextBlock Text="Test var char max name4"></TextBlock>
-            <TextBox x:Name="TestText4" ></TextBox>
+            <TextBlock Text="Enter LL no"></TextBlock>
+            <TextBox x:Name="TestText2" ></TextBox>
+            <TextBlock x:Name="Resulttext" Text=""></TextBlock>
+            <TextBlock x:Name="TestText3" ></TextBlock>
         </StackPanel>
     </Grid>
 </Page>

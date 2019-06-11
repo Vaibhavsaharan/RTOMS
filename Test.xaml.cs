@@ -20,19 +20,18 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class FinalRegistration : Page
+    public sealed partial class Test : Page
     {
-        public FinalRegistration()
+        public Test()
         {
             this.InitializeComponent();
         }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
+
         {
-            RCNO.Text = "Your RC No is :  " + e.Parameter.ToString() + "   Please save this for future refrence";
-        }
-        private void FinalRCButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Home));
+            TestCustomers s = (TestCustomers)e.Parameter;
+            testblock.Text = s.Name;
         }
     }
 }

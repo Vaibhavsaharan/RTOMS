@@ -12,6 +12,7 @@
         <StackPanel>
             <TextBlock Text="Your Registration of Vehicle has been recorded succesfully."></TextBlock>
             <TextBlock Text="Thank you."></TextBlock>
+            <TextBlock Name="RCNO"></TextBlock>
             <Button  x:Name="FinalRCButton" Content="Home" Background="DodgerBlue" Foreground="White"
          Width="189" HorizontalAlignment="Left"  Margin="0,10,0,0" Click="FinalRCButton_Click" />
         </StackPanel>

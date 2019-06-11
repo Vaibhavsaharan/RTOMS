@@ -3,4 +3,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <RemoteDebugEnabled>false</RemoteDebugEnabled>
   </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\dell\Pictures\icons8_autodesk_revit_48px_1.png</Source>
+    <AppIconSource>C:\Users\dell\Pictures\icons8_autodesk_revit_48px_1.png</AppIconSource>
+  </PropertyGroup>
 </Project>

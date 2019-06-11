@@ -26,5 +26,25 @@ namespace App1
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+
+        {
+
+            LL s = (LL)e.Parameter;
+
+            namebox.Text = s.Name;
+            fathername.Text = s.FName;
+            statebox.Text = s.state;
+            addressbox.Text = s.Address;
+            llbox.Text = s.LLno;
+            identificationbox.Text = s.Identity;
+            vehiclebox.Text = s.vehicletype;
+            dobbox.Text = s.DOB;
+            validdatetext.Text = "The Licence is valid form " + s.dateofissue + "  with an validity period of 6 months";
+        }
+        private void DownLoadButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

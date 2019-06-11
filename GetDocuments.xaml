@@ -18,13 +18,13 @@
             <TextBlock HorizontalAlignment="Center" Text="Get Your LL Document using Learner Licence No"></TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0" >
                 <TextBlock Text="Enter LL NO." ></TextBlock>
-                <TextBox Width="100" Margin="20,0,0,0"  ></TextBox>
+                <TextBox x:Name="GetLLBox" Width="100" Margin="20,0,0,0"  ></TextBox>
             </StackPanel>
             <Button  x:Name="GetLL" Content="Get LL" Background="DodgerBlue" Foreground="White"
                      HorizontalAlignment="Center" Width="189"  Margin="10" Click="GetLL_Click" />
         </StackPanel>
         <StackPanel Grid.Column="1" Orientation="Vertical" Margin="20">
-            <TextBlock HorizontalAlignment="Center" Text="Get Your LL Document using Learner Licence No"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Text="Get Your DL using Driving Licence No"></TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0" >
                 <TextBlock Text="Enter DL NO." ></TextBlock>
                 <TextBox Width="100" Margin="20,0,0,0"  ></TextBox>
@@ -33,7 +33,7 @@
                      HorizontalAlignment="Center" Width="189"  Margin="10" Click="GetDL_Click" />
         </StackPanel>
         <StackPanel Grid.Column="2" Orientation="Vertical" Margin="20">
-            <TextBlock HorizontalAlignment="Center" Text="Get Your LL Document using Learner Licence No"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Text="Get Your RC using Registration No"></TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,50,0,0" >
                 <TextBlock Text="Enter RC NO." ></TextBlock>
                 <TextBox Width="100" Margin="20,0,0,0"  ></TextBox>
