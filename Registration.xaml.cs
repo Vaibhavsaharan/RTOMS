@@ -22,8 +22,15 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+    public class InsertReg
+    {
+        public string RCno { get; set; }
+    }
+
     public sealed partial class Registration : Page
     {
+        
         const string dbConnectionString = "Data Source=DESKTOP-NBNJR96;Initial Catalog=RTO;Integrated Security=True";
         public Registration()
         {
@@ -48,28 +55,36 @@ namespace App1
                 command.Parameters.Add("@address", SqlDbType.VarChar).Value = ApplierAddress.Text;
                 command.Parameters.Add("@DOB", SqlDbType.VarChar).Value = DOBTextbox.Text;
                 command.Parameters.Add("@Mobile", SqlDbType.VarChar).Value = MobileTextBox.Text;
-                command.Parameters.Add("@State", SqlDbType.VarChar).Value = StateTextBox.Text;
+                command.Parameters.Add("@state", SqlDbType.VarChar).Value = StateTextBox.Text;
                 command.Parameters.Add("@rto", SqlDbType.VarChar).Value = RtoTextBox.Text;
                 command.Parameters.Add("@aadhar", SqlDbType.VarChar).Value = AadharTextBox.Text;
                 command.Parameters.Add("@vehicletype", SqlDbType.VarChar).Value = VehicleCombobox.SelectedItem.ToString();
                 command.Parameters.Add("@currentdate", SqlDbType.VarChar).Value = Currentdate;
                 command.Parameters.Add("@insissuedate", SqlDbType.VarChar).Value = InsDateTextBox.Text;
-                command.Parameters.Add("@inspremium", SqlDbType.Int).Value = Convert.ToInt32(InsPremiumTextBox.Text);
-                command.Parameters.Add("@insamount", SqlDbType.Int).Value = Convert.ToInt32(InsAmountTextBox.Text);
+                command.Parameters.Add("@inspremium", SqlDbType.Int).Value = Int32.Parse(InsPremiumTextBox.Text);
+                command.Parameters.Add("@insamount", SqlDbType.Int).Value = Int32.Parse(InsAmountTextBox.Text);
                 command.Parameters.Add("@chasis", SqlDbType.NVarChar).Value = ChasisTextBox.Text;
                 command.Parameters.Add("@typeofbody", SqlDbType.VarChar).Value = TypeBodyTextBox.Text;
                 command.Parameters.Add("@maker", SqlDbType.VarChar).Value = MakerTextBox.Text;
-                command.Parameters.Add("@cylinder", SqlDbType.Int).Value = Convert.ToInt32(CyclinderTextBox.Text);
-                command.Parameters.Add("@hp", SqlDbType.Int).Value = Convert.ToInt32(HpTextBox.Text);
-                command.Parameters.Add("@cc", SqlDbType.Int).Value = Convert.ToInt32(CCTextBox.Text);
+                command.Parameters.Add("@nocyclinder", SqlDbType.Int).Value = Int32.Parse(CyclinderTextBox.Text);
+                command.Parameters.Add("@hp", SqlDbType.Int).Value = Int32.Parse(HpTextBox.Text);
+                command.Parameters.Add("@cc", SqlDbType.Int).Value = Int32.Parse(CCTextBox.Text);
                 command.Parameters.Add("@mfd", SqlDbType.VarChar).Value = MfdTextBox.Text;
 
                 sqlConnection.Open();
-                SqlParameter returnParameter = command.Parameters.Add("@RCno", SqlDbType.VarChar, 50);
-                returnParameter.Direction = ParameterDirection.Output;
+                
                 command.ExecuteNonQuery();
-                string returnValue = (string)command.Parameters["@RCno"].Value;
-                this.Frame.Navigate(typeof(FinalRegistration), returnValue);
+                SqlCommand cmd = new SqlCommand("select Registration_number from Registration where Vehicle_chasis ='" + ChasisTextBox.Text.Trim() + "'", sqlConnection);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    InsertReg custo = new InsertReg
+                    {
+                        RCno = dr.GetString(0).ToString()
+                    };
+                    this.Frame.Navigate(typeof(FinalRegistration), custo);
+                }
+                
 
             }
             catch (SqlException ex)

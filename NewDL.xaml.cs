@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,8 +22,14 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+    public class InsertDL
+    {
+        public string DLno { get; set; }
+    }
     public sealed partial class NewDL : Page
     {
+        const string dbConnectionString = "Data Source=DESKTOP-NBNJR96;Initial Catalog=RTO;Integrated Security=True";
         public NewDL()
         {
             this.InitializeComponent();
@@ -46,7 +54,37 @@ namespace App1
 
         private void DLButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(FinalDL));
+
+            string Currentdate = DateTime.Now.ToString();
+            try
+            {
+
+                SqlConnection sqlConnection = new SqlConnection(dbConnectionString);
+                SqlCommand command = new SqlCommand("spInsertDL", sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@currentdate", SqlDbType.VarChar).Value = Currentdate;
+                command.Parameters.Add("@aadhar", SqlDbType.VarChar).Value = aadharbox.Text;
+                command.Parameters.Add("@vehicletype", SqlDbType.VarChar).Value = vehiclebox.Text;
+
+                
+                sqlConnection.Open();
+                command.ExecuteNonQuery();
+
+                SqlCommand cmd = new SqlCommand("select DrivingLicence_No from DL where Customer_id =(select Customer_id from Customer where Customer_aadhar='" + aadharbox.Text + "')", sqlConnection);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    InsertDL custo = new InsertDL
+                    {
+                        DLno = dr.GetString(0).ToString()
+                    };
+                    this.Frame.Navigate(typeof(FinalDL), custo);
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("SQL Error" + ex.Message.ToString());
+            }
         }
     }
 }

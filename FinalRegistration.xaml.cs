@@ -28,7 +28,8 @@ namespace App1
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            RCNO.Text = "Your RC No is :  " + e.Parameter.ToString() + "   Please save this for future refrence";
+            InsertReg s = (InsertReg)e.Parameter;
+            RCNO.Text = "Your RC No is :  " + s.RCno + "   Please save this for future refrence";
         }
         private void FinalRCButton_Click(object sender, RoutedEventArgs e)
         {

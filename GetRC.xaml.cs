@@ -26,5 +26,34 @@ namespace App1
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+
+        {
+
+            RC s = (RC)e.Parameter;
+
+            namebox.Text = s.Name;
+            fathernamebox.Text = s.FName;
+            statebox.Text = s.state + " State Vehicle Registration Certificate";
+            addressbox.Text = s.Address;
+            rcnobox.Text = s.RCno;
+            makerbox.Text = s.Maker;
+            vehicletypebox.Text = s.VehicleType;
+            mfdbox.Text = s.Mfd;
+            typebodybox.Text = s.Typeofbody;
+            chasisbox.Text = s.Chasis;
+            ccbox.Text = s.CC.ToString();
+            issuedatebox.Text = s.dateofissue;
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Home));
+        }
+
+        private void DownLoadButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

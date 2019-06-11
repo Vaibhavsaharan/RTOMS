@@ -13,16 +13,19 @@
             <Button  x:Name="AddData" Content="Add Data" Background="DodgerBlue" Foreground="White"
                      Width="189"  Margin="10" Click="ADDData_Click" />
             <!--<TextBlock Text="Test VARCHAR name"></TextBlock>
-            <TextBox x:Name="TestText" ></TextBox>
-            <TextBlock Text="Test VARCHAR name1"></TextBlock>
+            
             <TextBox x:Name="TestText1" ></TextBox>
             
             <TextBox x:Name="TestText2" ></TextBox>
             <DatePicker Header="DATE CHECK" x:Name="datetest" ></DatePicker>-->
-            <TextBlock Text="Enter LL no"></TextBlock>
+            <TextBlock Text="Test VARCHAR name1"></TextBlock>
+            <TextBox x:Name="TestText" ></TextBox>
+            
+            <TextBlock Text="Enter int no"></TextBlock>
+            <TextBox x:Name="TestText1" ></TextBox>
             <TextBox x:Name="TestText2" ></TextBox>
-            <TextBlock x:Name="Resulttext" Text=""></TextBlock>
-            <TextBlock x:Name="TestText3" ></TextBlock>
+            <!--<TextBlock x:Name="Resulttext" Text=""></TextBlock>
+            <TextBlock x:Name="TestText3" ></TextBlock>-->
         </StackPanel>
     </Grid>
 </Page>

@@ -17,7 +17,7 @@
                TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
             <TextBox x:Name="LLTextBox" Margin="4,-5,4,4" Width="250" PlaceholderText="FOR EX- RJ01PA5366" />
             <Button x:Name="PassportSignInButton" Content="SEARCH" Background="DodgerBlue" Foreground="White"
-         Width="80" HorizontalAlignment="Center" Margin="0,20"/>
+         Width="80" HorizontalAlignment="Center" Margin="0,20" Click="PassportSignInButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>

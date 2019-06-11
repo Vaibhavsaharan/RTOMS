@@ -62,15 +62,16 @@ namespace App1
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(dbConnectionString);
-                
-                //command1.Parameters.Add("@Name", SqlDbType.VarChar).Value = TestText.Text;
-                //command1.Parameters.Add("@FN", SqlDbType.VarChar).Value = TestText1.Text;
-                //command1.Parameters.Add("@rN", SqlDbType.Int).Value = Int32.Parse(TestText2.Text);
+                SqlCommand command = new SqlCommand("spInserttest", sqlConnection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add("@aad", SqlDbType.VarChar).Value = TestText.Text;
+                command.Parameters.Add("@string", SqlDbType.VarChar).Value = (TestText1.Text);
+                command.Parameters.Add("@intval", SqlDbType.Int).Value = Int32.Parse(TestText2.Text);
                 //command1.Parameters.Add("@Dob", SqlDbType.VarChar).Value = dateteststring;
                 //command1.Parameters.Add("@aad", SqlDbType.VarChar).Value = TestText3.Text;
                 //ommand1.Parameters.Add("@ide", SqlDbType.VarChar).Value = TestText4.Text;
-                //sqlConnection.Open();
-                //command1.ExecuteNonQuery();
+                sqlConnection.Open();
+                command.ExecuteNonQuery();
                 //Console.WriteLine("Data added"); 
                 /*SqlCommand cmd = new SqlCommand("select Customer_name,Customer_fathername,Customer_email,Customer_identity,Customer_address,Customer_DOB,Customer_mobile,Customer_aadhar,Customer_vehicle from Customer where Customer_id=(select Customer_id from LL where LearnersLicence_No=" + TestText2.Text.Trim() + ")", sqlConnection);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -86,25 +87,25 @@ namespace App1
                 }*/
 
                 // SqlConnection sqlConnection = new SqlConnection(dbConnectionString);
-                sqlConnection.Open();
-                SqlCommand cmd = new SqlCommand("select Customer_name,Customer_fathername,Customer_email,Customer_identity,Customer_address,Customer_DOB,Customer_mobile,Customer_aadhar,Customer_vehicle from Customer where Customer_id =(select Customer_id from LL where LearnersLicence_No=" + TestText2.Text.Trim() + ")", sqlConnection);
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    TestCustomers customer = new TestCustomers
-                    {
-                        Name = dr.GetString(0).ToString(),
-                        FName = dr.GetString(1).ToString(),
-                        Email = dr.GetString(2).ToString(),
-                        Identity = dr.GetString(3).ToString(),
-                        Address = dr.GetString(4).ToString(),
-                        DOB = dr.GetString(5).ToString(),
-                        Mobile = dr.GetString(6).ToString(),
-                        aadhar = dr.GetString(7).ToString(),
-                        vehicletype = dr.GetString(8).ToString()
-                    };
-                    this.Frame.Navigate(typeof(Test), customer);
-                }
+                /* sqlConnection.Open();
+                 SqlCommand cmd = new SqlCommand("select Customer_name,Customer_fathername,Customer_email,Customer_identity,Customer_address,Customer_DOB,Customer_mobile,Customer_aadhar,Customer_vehicle from Customer where Customer_id =(select Customer_id from LL where LearnersLicence_No=" + TestText2.Text.Trim() + ")", sqlConnection);
+                 SqlDataReader dr = cmd.ExecuteReader();
+                 while (dr.Read())
+                 {
+                     TestCustomers customer = new TestCustomers
+                     {
+                         Name = dr.GetString(0).ToString(),
+                         FName = dr.GetString(1).ToString(),
+                         Email = dr.GetString(2).ToString(),
+                         Identity = dr.GetString(3).ToString(),
+                         Address = dr.GetString(4).ToString(),
+                         DOB = dr.GetString(5).ToString(),
+                         Mobile = dr.GetString(6).ToString(),
+                         aadhar = dr.GetString(7).ToString(),
+                         vehicletype = dr.GetString(8).ToString()
+                     };
+                     this.Frame.Navigate(typeof(Test), customer);
+                 }*/
 
             }
             catch (SqlException ex)

@@ -26,6 +26,12 @@ namespace App1
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            InsertDL s = (InsertDL)e.Parameter;
+            DLNO.Text = "Your Driving Licence NO is :  " + s.DLno + "   Please save this for future refrence";
+        }
         private void FinalDLButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Home));
