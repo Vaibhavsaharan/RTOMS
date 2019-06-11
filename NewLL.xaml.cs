@@ -23,6 +23,12 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+
+        public class InsertLL
+        {
+            public string LLno { get; set; }
+        }
     public sealed partial class NewLL : Page
     {
         const string dbConnectionString = "Data Source=DESKTOP-NBNJR96;Initial Catalog=RTO;Integrated Security=True";
@@ -40,7 +46,7 @@ namespace App1
             {
 
                         SqlConnection sqlConnection = new SqlConnection(dbConnectionString);
-                        SqlCommand command = new SqlCommand("spinsertLL1", sqlConnection);
+                        SqlCommand command = new SqlCommand("spInsertLL", sqlConnection);
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@Name", SqlDbType.VarChar).Value = UsernameTextbox.Text;
                         command.Parameters.Add("@FName", SqlDbType.VarChar).Value = FatherNameTextbox.Text;
@@ -55,13 +61,18 @@ namespace App1
                         command.Parameters.Add("@vehicletype", SqlDbType.VarChar).Value = VehicleCombox.SelectedItem.ToString();
                         command.Parameters.Add("@currentdate", SqlDbType.VarChar).Value = Currentdate;
                         sqlConnection.Open();
-                        SqlParameter returnParameter = command.Parameters.Add("Return", SqlDbType.Int);
-                        returnParameter.Direction = ParameterDirection.ReturnValue;
                         command.ExecuteNonQuery();
-                        int returnValue = (int)returnParameter.Value;
-                        this.Frame.Navigate(typeof(FinalLL),returnValue);
-              
-               
+                        
+                SqlCommand cmd = new SqlCommand("select LearnersLicence_No from LL where Customer_id =(select Customer_id from Customer where Customer_aadhar=" + AadharTextBox.Text.Trim() + ")", sqlConnection);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    InsertLL custo = new InsertLL
+                    {
+                        LLno = dr.GetString(0).ToString()
+                    };
+                    this.Frame.Navigate(typeof(FinalLL), custo);
+                }
             }
             catch (SqlException ex)
             {

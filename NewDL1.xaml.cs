@@ -53,7 +53,7 @@ namespace App1
 
                 SqlConnection sqlConnection = new SqlConnection(dbConnectionString);
                 sqlConnection.Open();
-                SqlCommand cmd = new SqlCommand("select Customer_name,Customer_fathername,Customer_email,Customer_identity,Customer_address,Customer_DOB,Customer_mobile,Customer_aadhar,Customer_vehicle from Customer where Customer_id =(select Customer_id from LL where LearnersLicence_No=" + LLTextBox.Text.Trim() + ")", sqlConnection);
+                SqlCommand cmd = new SqlCommand("select Customer_name,Customer_fathername,Customer_email,Customer_identity,Customer_address,Customer_DOB,Customer_mobile,Customer_aadhar,Customer_vehicle from Customer where Customer_id =(select Customer_id from LL where LearnersLicence_No='" + LLTextBox.Text.Trim() + "')", sqlConnection);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {

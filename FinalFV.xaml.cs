@@ -20,20 +20,30 @@ namespace App1
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class FinalLL : Page
+    public sealed partial class FinalFV : Page
     {
-        public FinalLL()
+        public FinalFV()
         {
             this.InitializeComponent();
         }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
+
         {
-            InsertLL s = (InsertLL)e.Parameter;
-            LLNO.Text = "Your Learner Licence NO is :  " + s.LLno + "   Please save this for future refrence";
+
+            Vehicle s = (Vehicle)e.Parameter;
+
+ 
+            fathername.Text = s.Chasis;
+            emailbox.Text = s.VehicleType;
+            addressbox.Text = s.Maker;
+            aadharbox.Text = s.Typeofbody;
+            mobilebox.Text = s.Cylinder.ToString();
+            identificationbox.Text = s.HP.ToString();
+            vehiclebox.Text = s.CC.ToString();
+            dobbox.Text = s.Mfd;
         }
 
-        private void LLButton_Click(object sender, RoutedEventArgs e)
+        private void DLButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Home));
         }

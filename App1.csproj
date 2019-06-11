@@ -123,6 +123,9 @@
     <Compile Include="FinalDL.xaml.cs">
       <DependentUpon>FinalDL.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FinalFV.xaml.cs">
+      <DependentUpon>FinalFV.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FinalLL.xaml.cs">
       <DependentUpon>FinalLL.xaml</DependentUpon>
     </Compile>
@@ -208,6 +211,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="FinalDL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinalFV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

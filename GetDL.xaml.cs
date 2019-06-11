@@ -26,5 +26,30 @@ namespace App1
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+
+        {
+
+            DL s = (DL)e.Parameter;
+
+            namebox.Text = s.Name;
+            fathernamebox.Text = s.FName;
+            statebox.Text = s.state + " State Motor Driving Licence";
+            addressbox.Text = s.Address;
+            dlnobox.Text = s.DLno;
+            vehiclebox.Text = s.vehicletype;
+            dobbox.Text = s.DOB;
+            issuedatebox.Text = s.dateofissue;
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Home));
+        }
+
+        private void DownLoadButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,6 +9,70 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <StackPanel Orientation="Vertical" Width="348" Height="250" BorderBrush="AliceBlue" BorderThickness="2" Background="WhiteSmoke" Margin="200,100,300,500">
+            <Border Background="Red" Width=" 250" Height="15">
+                <TextBlock Text="The Union of India" HorizontalAlignment="Center" Foreground="White" Height="11" FontSize="10" Width="83"/>
+            </Border>
+            <Border Background="Red" Width=" 250" Height="15">
+                <TextBlock x:Name="statebox" HorizontalAlignment="Center" Foreground="White"  Height="11" FontSize="10"/>
+            </Border>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Regn. Number          :" FontWeight="Bold" HorizontalAlignment="Left" FontSize="8" Margin="20,6,0,0"></TextBlock>
+                <TextBlock x:Name="rcnobox" FontWeight="SemiBold" FontSize="8" Margin="22,6,0,0" Width="69"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Regd. Owner             :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="namebox" FontSize="8" Margin="21,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="S/W/D                        :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="fathernamebox" FontSize="8" Margin="21,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
 
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Text="Address                      : " HorizontalAlignment="Left" FontSize="8" Margin="20,0,0,0"></TextBlock>
+                <TextBlock x:Name="addressbox" FontWeight="SemiBold" TextWrapping="WrapWholeWords" Width="129" Height="32" FontSize="8" Margin="21,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Maker's Class             :" FontWeight="Bold" HorizontalAlignment="Left" FontSize="8" Margin="20,6,0,0"></TextBlock>
+                <TextBlock x:Name="makerbox" FontWeight="SemiBold" HorizontalAlignment="Left" FontSize="8" Margin="21,6,0,0" Width="60"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Vehicle Class              :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="vehicletypebox" FontSize="8" Margin="22,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Mfd of Vehicle           :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="mfdbox" FontSize="8" Margin="22,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Type Of Body             :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="typebodybox" FontSize="8" Margin="21,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Chasis No                   :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="chasisbox" FontSize="8" Margin="22,0,0,0" FontWeight="SemiBold" Width="97"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Cubic Capacity           :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="ccbox" FontSize="8" Margin="22,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Date of Registration  :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock x:Name="issuedatebox" FontSize="8" Margin="21,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
+            </StackPanel>
+            <TextBlock Text="(signature of holder)" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="8" FontWeight="Bold" Margin="6,34,0,0"/>
+            <TextBlock Text="Issuing Authority" TextWrapping="Wrap" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="8" FontWeight="Bold" Margin="1,-11,6,0"/>
+
+
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="-100,32,0,0" Height="100" >
+            <Button  x:Name="HomeButton" Content="Home" Background="DodgerBlue" Foreground="White"
+         Width="189"   VerticalAlignment="Top" Click="HomeButton_Click" Margin="0,0,20,0" />
+            <Button  x:Name="DownLoadButton" Content="Print" Background="DodgerBlue" Foreground="White"
+         Width="189"  VerticalAlignment="Top" Click="DownLoadButton_Click" Margin="20,0,0,0" />
+        </StackPanel>
     </Grid>
 </Page>

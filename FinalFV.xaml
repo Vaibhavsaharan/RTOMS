@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="App1.FinalFV"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition  Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="3" Margin="0,0,0,20" Text="Following Vehicle Details Were Found" FontSize="28" FontWeight="Bold"></TextBlock>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Vertical" Margin="10,46,10,10" BorderBrush="AliceBlue" BorderThickness="2" Padding="8">
+
+            
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Chasis No" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="fathername" Margin="123,0,0,0"  Width="201" ></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Margin="0,0,0,5" Text="Vehicle Type" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="emailbox" Margin="108,0,40,0" Width="220" ></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Margin="0,0,0,5" Text="Maker" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="addressbox"  Margin="148,0,40,0" Width="320"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Type of Body" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="aadharbox" Margin="101,0,0,0" Width="201" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="No of Cyclinder" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="mobilebox" Margin="86,0,40,0" Width="120" ></TextBlock>
+            </StackPanel>
+
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Margin="0,0,0,5" Text="Horse Power" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="identificationbox" Margin="105,0,40,0" Width="120"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Capacity (cubic) " Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <TextBlock x:Name="vehiclebox" Margin="84,0,40,0" Width="120"></TextBlock>
+            </StackPanel>
+
+            
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Manufacturing Date" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="dobbox" Margin="55,0,40,0" Width="120"></TextBlock>
+            </StackPanel>
+
+        </StackPanel>
+
+
+        <Button Grid.Row="3" Grid.Column="0" x:Name="DLButton" Content="Back To Home" Background="DodgerBlue" Foreground="White"
+         Width="189" HorizontalAlignment="Left" Margin="10,29.4,0,0" VerticalAlignment="Top" Click="DLButton_Click" />
+    </Grid>
+</Page>
