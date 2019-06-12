@@ -48,7 +48,7 @@ namespace App1
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Home));
+            this.Frame.Navigate(typeof(GetDocuments));
         }
 
         private void DownLoadButton_Click(object sender, RoutedEventArgs e)

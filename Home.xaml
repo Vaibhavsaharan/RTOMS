@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Orientation="Vertical" >
-        <TextBlock Margin=" 20" FontSize="48" Text="Welcome to Ministry of Road Transport and Highways"/>
+        <TextBlock Margin=" 10" FontSize="48" Text="Welcome to Ministry of Road Transport and Highways"/>
         <TextBlock TextWrapping="Wrap" Margin="10,0,10,10" Text=
             "The Ministry of Road Transport and Highways has been facilitating computerization of more than 1000 Road Transport Offices (RTOs) across the country. RTOs issue Registration Certificate (RC) and Driving License (DL) that are valid across the country. It was necessary to define same standards for these documents on a pan-India level to ensure interoperability and correctness and timely availability of information. SCOSTA committee setup for this purpose had recommended a uniform standardized software across the country. Ministry entrusted National Informatics Centre the to standardize and deploy the software VAHAN for Vehicle Registration and SARATHI for Driving Licenses and compilation of data with respect to Vehicle Registration and Driving Licenses of all the states in State Register and National Register." FontSize="22"/>
         <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="The VAHAN and SARATHI are conceptualized to capture the functionalities as mandated by Central Motor Vehicle Act, 1988 as well as State motor vehicle Rules with customization in the core product to suit the requirements of 36 States." RenderTransformOrigin="0.5,0.905" Height="75" FontSize="22" />

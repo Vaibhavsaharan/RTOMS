@@ -75,8 +75,8 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0,32,0,0" Height="100" >
-            <Button  x:Name="HomeButton" Content="Home" Background="DodgerBlue" Foreground="White"
-         Width="189"   VerticalAlignment="Top" Click="DownLoadButton_Click" Margin="0,0,20,0" />
+            <Button  x:Name="BackButton" Content="Back" Background="DodgerBlue" Foreground="White"
+         Width="189"   VerticalAlignment="Top" Click="BackButton_Click" Margin="0,0,20,0" />
             <Button  x:Name="DownLoadButton" Content="Print" Background="DodgerBlue" Foreground="White"
          Width="189"  VerticalAlignment="Top" Click="DownLoadButton_Click" Margin="20,0,0,0" />
         </StackPanel>

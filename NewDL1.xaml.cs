@@ -57,24 +57,31 @@ namespace App1
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    Customers customer = new Customers
+                    if (dr.HasRows == false)
                     {
-                        Name = dr.GetString(0).ToString(),
-                        FName = dr.GetString(1).ToString(),
-                        Email = dr.GetString(2).ToString(),
-                        Identity = dr.GetString(3).ToString(),
-                        Address = dr.GetString(4).ToString(),
-                        DOB = dr.GetString(5).ToString(),
-                        Mobile = dr.GetString(6).ToString(),
-                        aadhar = dr.GetString(7).ToString(),
-                        vehicletype = dr.GetString(8).ToString()
-                    };
-                    this.Frame.Navigate(typeof(NewDL), customer);
+                    
+                            ErrorMessage.Text = "Entered LL No Is Not Present In Database";
+                            this.Frame.Navigate(typeof(Home));
+                            break;
+                    }
+                    else
+                    {
+                        Customers customer = new Customers
+                        {
+                            Name = dr.GetString(0).ToString(),
+                            FName = dr.GetString(1).ToString(),
+                            Email = dr.GetString(2).ToString(),
+                            Identity = dr.GetString(3).ToString(),
+                            Address = dr.GetString(4).ToString(),
+                            DOB = dr.GetString(5).ToString(),
+                            Mobile = dr.GetString(6).ToString(),
+                            aadhar = dr.GetString(7).ToString(),
+                            vehicletype = dr.GetString(8).ToString()
+                        };
+                        this.Frame.Navigate(typeof(NewDL), customer);
+                    }
+                    
                 }
-                
-
-                
-
             }
             catch (SqlException ex)
             {

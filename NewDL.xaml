@@ -24,42 +24,42 @@
         <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Vertical" Margin="10,46,10,10" BorderBrush="AliceBlue" BorderThickness="2" Padding="4">
             
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Text="Aadhar Number" Margin="0,0,0,5" ></TextBlock>
+                    <TextBlock Text="Aadhar Number" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
                     <TextBlock x:Name="aadharbox" Margin="200,0,0,0" Width="201" FontWeight="SemiBold"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Text="Name of the Applicant" Margin="0,0,0,5" ></TextBlock>
+                <TextBlock Text="Name of the Applicant" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
                     <TextBlock x:Name="namebox" Margin="157,0,0,0" Width="201" ></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Text="Father's Name of the Applicant" Margin="0,0,0,5" ></TextBlock>
+                <TextBlock Text="Father's Name of the Applicant" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
                     <TextBlock x:Name="fathername" Margin="102,0,0,0" Width="201"></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Text="Date of Birth" Margin="0,0,0,5"/>
-                <TextBlock x:Name="dobbox" Margin="223,0,40,0" Width="120"></TextBlock>
+                <TextBlock Text="Date of Birth" Margin="0,0,0,5" FontWeight="SemiBold"/>
+                <TextBlock x:Name="dobbox" Margin="225,0,40,0" Width="120"></TextBlock>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Phone Number" Margin="0,0,0,5"></TextBlock>
-                    <TextBlock x:Name="mobilebox" Margin="206,0,40,0" Width="120" ></TextBlock>
+                <TextBlock Text="Phone Number" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
+                    <TextBlock x:Name="mobilebox" Margin="208,0,40,0" Width="120" ></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Margin="0,0,0,5" Text="Email"></TextBlock>
-                <TextBlock x:Name="emailbox" Margin="270,0,40,0" Width="220" ></TextBlock>
+                <TextBlock Margin="0,0,0,5" Text="Email" FontWeight="SemiBold"></TextBlock>
+                <TextBlock x:Name="emailbox" Margin="274,0,40,0" Width="220" ></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Margin="0,0,0,5" Text="Identification Mark"></TextBlock>
+                <TextBlock Margin="0,0,0,5" Text="Identification Mark" FontWeight="SemiBold"></TextBlock>
                     <TextBlock x:Name="identificationbox" Margin="181,0,40,0" Width="120"></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                    <TextBlock Margin="0,0,0,5" Text="Address"></TextBlock>
-                    <TextBlock x:Name="addressbox"  Margin="252,0,40,0" Width="320"></TextBlock>
+                <TextBlock Margin="0,0,0,5" Text="Address" FontWeight="SemiBold"></TextBlock>
+                    <TextBlock x:Name="addressbox"  Margin="255,0,40,0" Width="320"></TextBlock>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Apply New Driving Licence for :" Margin="0,0,0,5"></TextBlock>
-                    <TextBlock x:Name="vehiclebox" Margin="99,0,40,0" Width="120"></TextBlock>
+                <TextBlock Text="Apply New Driving Licence for :" Margin="0,0,0,5" FontWeight="SemiBold"></TextBlock>
+                    <TextBlock x:Name="vehiclebox" Margin="97,0,40,0" Width="120"></TextBlock>
                 </StackPanel>
           
         </StackPanel>
@@ -67,5 +67,7 @@
         
         <Button Grid.Row="3" Grid.Column="0" x:Name="DLButton" Content="Submit" Background="DodgerBlue" Foreground="White"
          Width="189" HorizontalAlignment="Left" Margin="10,29.4,0,0" VerticalAlignment="Top" Click="DLButton_Click" />
+        <Button Grid.Row="3" Grid.Column="1" x:Name="BackButton" Content="Cancel" Background="DodgerBlue" Foreground="White"
+         Width="189" HorizontalAlignment="Left" Margin="0,29.4,0,0" VerticalAlignment="Top" Click="BackButton_Click" />
     </Grid>
 </Page>

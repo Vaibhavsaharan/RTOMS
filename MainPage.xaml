@@ -16,39 +16,48 @@
                              ItemInvoked="NavView_ItemInvoked"
                     SelectionChanged="NavView_SelectionChanged"
                     Loaded="NavView_Loaded"
+                             
                              >
-            
+           <!-- <NavigationView.Background >
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FFD9D9D9" Offset="0"/>
+                    <GradientStop Color="#FFD6FCFA" Offset="1"/>
+                </LinearGradientBrush>
+            </NavigationView.Background>-->
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem Tag="Home" Icon="Home" Content="Home"/>
                 <muxc:NavigationViewItemSeparator/>
                 <muxc:NavigationViewItemHeader x:Name="MainPagesHeader" Content="Main pages"/>
                 <muxc:NavigationViewItem Tag="LL" Content="Learner's Licence">
+                    
                     <muxc:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE710;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
                 
                 <muxc:NavigationViewItem  Tag="DL" Content="Driving Licence">
                     <muxc:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE710;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-  
-                <muxc:NavigationViewItem Tag="Reg" Icon="Audio" Content="Registration"/>
+
+                <muxc:NavigationViewItem  Tag="Reg" Content="Registration">
+                    <muxc:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE710;"/>
+                    </muxc:NavigationViewItem.Icon>
+                </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Tag="FV" Content="Find Vehicle">
                     <muxc:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C5;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem  Tag="GD" Content="Get Documents">
                     <muxc:NavigationViewItem.Icon>
-                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7C3;"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
-
-                <muxc:NavigationViewItem Tag="Database" Icon="Audio" Content="Test Database"/>
 
             </muxc:NavigationView.MenuItems>
 

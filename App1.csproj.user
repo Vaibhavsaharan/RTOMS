@@ -6,5 +6,6 @@
   <PropertyGroup>
     <Source>C:\Users\dell\Pictures\icons8_autodesk_revit_48px_1.png</Source>
     <AppIconSource>C:\Users\dell\Pictures\icons8_autodesk_revit_48px_1.png</AppIconSource>
+    <SplashScreenSource>C:\Users\dell\Downloads\mandi\SEM4\IC221\mediumtile-sdk.png</SplashScreenSource>
   </PropertyGroup>
 </Project>

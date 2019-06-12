@@ -11,11 +11,11 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Apply For New DL using LL" FontSize="48" Margin="4" TextAlignment="Center" Width="580"/>
-            <TextBlock x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Foreground="Red" TextAlignment="Center"/>
+            <TextBlock x:Name="ErrorMessage" Text="" FontSize="20" Margin="4" Width="300" Foreground="Red" TextAlignment="Center"/>
             <TextBlock Text="Enter LL No" Margin="0,50,0,20"
                TextWrapping="Wrap" Width="300"
                TextAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
-            <TextBox x:Name="LLTextBox" Margin="4,-5,4,4" Width="250"/>
+            <TextBox x:Name="LLTextBox" Margin="4,-5,4,4" Width="250" PlaceholderText="RJ01-0000001-2019"/>
             <Button x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White"
          Width="80" HorizontalAlignment="Center" Margin="0,20" Click="PassportSignInButton_Click"/>
         </StackPanel>

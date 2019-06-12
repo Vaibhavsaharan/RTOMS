@@ -7,8 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -20,12 +21,12 @@
             <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Orientation="Vertical" >
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Orientation="Vertical" Padding="11,0,0,0" >
             <TextBlock Text="Add New Learner's Licence (LL)" FontSize="24" FontWeight="Bold"></TextBlock>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Select State and RTO Office from where LL is being applied:-" Width="405" Height="20" ></TextBlock>
                 <TextBlock Margin="10,6,10,0" Text="State"></TextBlock>
-                <TextBox x:Name="StateTextbox" PlaceholderText="Enter your State" ></TextBox>
+                <TextBox x:Name="StateTextbox" PlaceholderText="Enter your State" Width="146" ></TextBox>
                 <TextBlock Margin="100,6,10,0" Text="RTO" ></TextBlock>
                 <TextBox x:Name="RtoTextbox" PlaceholderText="FOR EX - RJ01" ></TextBox>
             </StackPanel>
@@ -33,7 +34,7 @@
             <StackPanel Margin="0,10,0,0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Aadhar Number" ></TextBlock>
-                    <TextBox Name="AadharTextBox"  Margin="203,0,0,0" Width="201" PlaceholderText="XXXX-XXXX-XXXX-XXXX"  ></TextBox>
+                    <TextBox Name="AadharTextBox"  Margin="203,0,0,0" Width="201" PlaceholderText="XXXX-XXXX-XXXX"  ></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Name of the Applicant" ></TextBlock>
@@ -43,20 +44,20 @@
                     <TextBlock Text="Father's Name of the Applicant" ></TextBlock>
                     <TextBox x:Name="FatherNameTextbox" Margin="105,0,0,0" Width="201"></TextBox>
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <ComboBox x:Name="GenderCombobox" PlaceholderText="Choose Gender" Width="200">
+                <StackPanel Orientation="Horizontal" Margin="5,13,5,5">
+                    <ComboBox x:Name="GenderCombobox" PlaceholderText="Choose Gender" Width="200" Margin="-3,0,0,0">
                         <x:String>Male</x:String>
                         <x:String>Female</x:String>
                         <x:String>Transgender</x:String>
                     </ComboBox>
 
                     <TextBlock Text="Date of Birth" Margin="105,0,0,0"></TextBlock>
-                    <TextBox x:Name="DOBTextBox" Margin="117,0,0,0" PlaceholderText="DD-MM-YYYY"></TextBox>
+                    <TextBox x:Name="DOBTextBox" Margin="55,0,0,0" PlaceholderText="DD-MM-YYYY"></TextBox>
                     
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <TextBlock Text="Qualification"></TextBlock>
-                    <ComboBox x:Name="QualificationCombobox" Margin="20,0,0,0"  PlaceholderText="Choose the Appropriate Education level" Width="350">
+                    <TextBlock Text="Qualification" Margin="-5,0,0,0"></TextBlock>
+                    <ComboBox x:Name="QualificationCombobox" Margin="50,0,0,0"  PlaceholderText="Choose the Appropriate Education level" Width="350">
                         <x:String>Illiterate</x:String>
                         <x:String>Below 8th</x:String>
                         <x:String>8th passed</x:String>
@@ -76,12 +77,12 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
                     <TextBlock Text="Phone Number"></TextBlock>
-                    <TextBox x:Name="PhoneTextbox" Margin="10,0,40,0" PlaceholderText="EX: 7459814143"></TextBox>
+                    <TextBox x:Name="PhoneTextbox" Margin="33,0,40,0" PlaceholderText="EX: 7459814143"></TextBox>
                     <TextBlock Margin="100,0,0,0" Text="Email"></TextBlock>
-                    <TextBox x:Name="EmailTextbox" Margin="10,0,40,0" PlaceholderText="EX: abc@xyz.com"></TextBox>
+                    <TextBox x:Name="EmailTextbox" Margin="10,0,40,0" PlaceholderText="EX: abc@xyz.com" Width="206"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <TextBlock Margin="0,0,0,0" Text="Identification Mark"></TextBlock>
+                    <TextBlock Margin="-5,0,0,0" Text="Identification Mark"></TextBlock>
                     <TextBox x:Name="IdentificationTextbox" Margin="10,0,40,0" PlaceholderText="SCAR ON HEAD, MOLE ON RIGHT HAND ETC"></TextBox>
                 </StackPanel>
             </StackPanel>
@@ -89,8 +90,8 @@
         <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,30,0,0">
             <TextBlock Margin="0,0,0,20" Text="Address"></TextBlock>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,30,0,0">
-            <TextBox x:Name="addressTextbox" Margin="0,0,0,1" ></TextBox>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="20,30,0,0">
+            <TextBox x:Name="addressTextbox" Margin="0,0,0,1" Width="400" ></TextBox>
         </StackPanel>
         <ComboBox x:Name="VehicleCombox" Grid.ColumnSpan="2" Grid.Row="2" Margin="10,20,0,0" PlaceholderText="Select Multiple class of vehicle" Width="250">
             <x:String>MC50CC</x:String>
@@ -113,6 +114,10 @@
         </ComboBox>
         <Button Grid.Row="3" Grid.Column="0" x:Name="LLButton" Content="Submit" Background="DodgerBlue" Foreground="White"
          Width="189" HorizontalAlignment="Left" Margin="10,29.4,0,0" VerticalAlignment="Top" Click="LLButton_Click" />
+
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" x:Name="BackButton" Content="Cancel" Background="DodgerBlue" Foreground="White"
+         Width="189" HorizontalAlignment="Left" Margin="238,29.4,0,0" VerticalAlignment="Top" Click="BackButton_Click" />
+
     </Grid>
     
 </Page>

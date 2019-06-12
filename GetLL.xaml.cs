@@ -46,5 +46,11 @@ namespace App1
         {
 
         }
+
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(GetDocuments));
+        }
     }
 }

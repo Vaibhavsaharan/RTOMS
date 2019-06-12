@@ -79,6 +79,10 @@ namespace App1
                 Console.WriteLine("SQL Error" + ex.Message.ToString());
             }
         }
-       
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Home));
+        }
     }
 }

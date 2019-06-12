@@ -7,6 +7,9 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -58,6 +61,17 @@ namespace App1
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
+            }
+            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView"))
+            {
+                var titleBar = ApplicationView.GetForCurrentView().TitleBar;
+                if (titleBar != null)
+                {
+                    titleBar.ButtonBackgroundColor = Colors.CadetBlue;
+                    titleBar.ButtonForegroundColor = Colors.White;
+                    titleBar.BackgroundColor = Colors.CadetBlue;
+                    titleBar.ForegroundColor = Colors.White;
+                }
             }
 
             if (e.PrelaunchActivated == false)

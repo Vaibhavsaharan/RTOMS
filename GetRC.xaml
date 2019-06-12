@@ -51,7 +51,7 @@
                 <TextBlock x:Name="typebodybox" FontSize="8" Margin="21,0,0,0" FontWeight="SemiBold" Width="60"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Chasis No                   :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="VIN No                       :" FontSize="8" Margin="20,0,0,0" FontWeight="Bold"></TextBlock>
                 <TextBlock x:Name="chasisbox" FontSize="8" Margin="22,0,0,0" FontWeight="SemiBold" Width="97"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
@@ -69,7 +69,7 @@
 
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="-100,32,0,0" Height="100" >
-            <Button  x:Name="HomeButton" Content="Home" Background="DodgerBlue" Foreground="White"
+            <Button  x:Name="HomeButton" Content="Back" Background="DodgerBlue" Foreground="White"
          Width="189"   VerticalAlignment="Top" Click="HomeButton_Click" Margin="0,0,20,0" />
             <Button  x:Name="DownLoadButton" Content="Print" Background="DodgerBlue" Foreground="White"
          Width="189"  VerticalAlignment="Top" Click="DownLoadButton_Click" Margin="20,0,0,0" />

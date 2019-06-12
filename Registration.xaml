@@ -27,11 +27,11 @@
 
                 <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
                     <TextBlock Text="State"></TextBlock>
-                    <TextBox x:Name="StateTextBox" Margin="66,0,0,0" Width="139"></TextBox>
+                    <TextBox x:Name="StateTextBox" PlaceholderText="Enter Your State" Margin="66,0,0,0" Width="139"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Rto Office"></TextBlock>
-                    <TextBox x:Name="RtoTextBox" Margin="33,0,0,0" Width="139"></TextBox>
+                    <TextBox x:Name="RtoTextBox" Margin="33,0,0,0" PlaceholderText="For Ex: RJ01" Width="139"></TextBox>
                 </StackPanel>
                 <StackPanel Margin="0,10,0,0">
                     <StackPanel Orientation="Horizontal">
@@ -49,17 +49,17 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
                         <TextBlock Text="Phone Number"></TextBlock>
-                        <TextBox x:Name="MobileTextBox" Margin="10,0,40,0" PlaceholderText="EX: 9459814143"></TextBox>
+                        <TextBox x:Name="MobileTextBox" Margin="39,0,40,0" PlaceholderText="EX: 9459814143"></TextBox>
                         <TextBlock Margin="100,0,0,0" Text="Email"></TextBlock>
-                        <TextBox x:Name="EmailTextBox" Margin="10,0,40,0" PlaceholderText="EX: abc@xyz.com"></TextBox>
+                        <TextBox x:Name="EmailTextBox" Margin="10,0,40,0" PlaceholderText="EX: abc@xyz.com" Width="170"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <TextBlock Margin="0,0,0,0" Text="Identification Mark"></TextBlock>
-                        <TextBox x:Name="IdentificationTextbox" Margin="10,0,40,0" PlaceholderText="SCAR ON HEAD, MOLE ON RIGHT HAND ETC"></TextBox>
+                        <TextBlock Margin="-3,0,0,0" Text="Identification Mark"></TextBlock>
+                        <TextBox x:Name="IdentificationTextbox" Margin="14,0,40,0" PlaceholderText="SCAR ON HEAD, MOLE ON RIGHT HAND ETC"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0,0,0,0" Text="Date of Birth"></TextBlock>
-                        <TextBox x:Name="DOBTextbox" Margin="10,0,40,0" PlaceholderText="DD-MM-YYYY"></TextBox>
+                        <TextBox x:Name="DOBTextbox" Margin="55,0,40,0" PlaceholderText="DD-MM-YYYY"></TextBox>
                     </StackPanel>
 
                 </StackPanel>
@@ -68,7 +68,7 @@
                 <TextBlock  Margin="0,0,39,20" Text="Address of applier"></TextBlock>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,30,0,0">
-                <TextBox x:Name="ApplierAddress" Margin="-105,0,0,1" Width="360" ></TextBox>
+                <TextBox x:Name="ApplierAddress" Margin="-134,0,0,1" Width="360" ></TextBox>
             </StackPanel>
             <StackPanel Grid.Row="1" Grid.Column="3" Margin="10,30,0,0">
                 <TextBlock Margin="0,0,0,20" Text="Address of Dealer"></TextBlock>
@@ -77,7 +77,7 @@
                 <TextBox x:Name="DealerAddress" Margin="0,0,0,1" Width="300" ></TextBox>
             </StackPanel>
             <StackPanel Grid.ColumnSpan="4" Grid.Row="2" >
-                <ComboBox x:Name="VehicleCombobox" Margin="10,20,0,20" PlaceholderText="Select Multiple class of vehicle" Width="200">
+                <ComboBox x:Name="VehicleCombobox" Margin="10,20,0,20" PlaceholderText="Select Multiple class of vehicle" Width="249">
                     <x:String>MC50CC</x:String>
                     <x:String>MCWOG</x:String>
                     <x:String>MCWG</x:String>
@@ -121,8 +121,8 @@
                     <TextBox x:Name="CCTextBox" Margin="255,0,0,0" Width="296"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
-                    <TextBlock Text="Chasis Number" Margin="10,2,0,0" ></TextBlock>
-                    <TextBox x:Name="ChasisTextBox" Margin="249,0,0,0" Width="296"></TextBox>
+                    <TextBlock Text="VIN Number" Margin="10,2,0,0" ></TextBlock>
+                    <TextBox x:Name="ChasisTextBox" Margin="267,0,0,0" Width="296"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <TextBlock Text="Engine Number or Motor Number in case
