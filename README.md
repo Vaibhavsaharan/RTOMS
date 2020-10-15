@@ -19,3 +19,13 @@ Regional Transport Office Managment System : A database mangement system for RTO
 
 ### Fetching the Licences
 ![fff](https://github.com/Vaibhavsaharan/RTOMS/blob/master/scr/IMG-20201015-WA0010.jpg)
+
+## Installation
+To recreate this project on windows
+
+1. Install MS-SQL server on your machine.
+
+2. Install virtual studio and select window app development project.
+
+3. Replace with these files in /users/app/your-project-name
+
